@@ -14,4 +14,11 @@ describe("Mostrar el precio de Items", () => {
         expect(resultado).toEqual(5);
     });
 });
+describe("Mostrar el estado seleccionado", () => {
+    it("Deberia retornar el estado", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.ObtenerImpuestoPorEstado("NV");
+        expect(resultado).toEqual("NV");
+    });
+});
   
