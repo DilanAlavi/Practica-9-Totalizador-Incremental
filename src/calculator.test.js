@@ -14,17 +14,25 @@ describe("Mostrar el precio de Items", () => {
         expect(resultado).toEqual(5);
     });
 });
-describe("Mostrar el estado seleccionado", () => {
-    it("Deberia retornar el estado", () => {
-        const calculatorInstance = new totalizarventas();
-        const resultado = calculatorInstance.ObtenerImpuestoPorEstado("NV");
-        expect(resultado).toEqual(0.08);
-    });
-});
 describe("Mostrar el precioNeto", () => {
     it("Deberia retornar el valor total", () => {
         const calculatorInstance = new totalizarventas();
         const resultado = calculatorInstance.MostrarPrecioNeto(4,5);
         expect(resultado).toEqual(20);
+    });
+});
+
+describe("Mostrar el precio ", () => {
+    it("Deberia retornar el valor total", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.mostrarEstado("CA");
+        expect(resultado).toEqual(0.0825);
+    });
+});
+describe("Mostrar el precio total", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(4,5,"CA");
+        expect(resultado).toEqual(21.65);
     });
 });
