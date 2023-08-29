@@ -57,3 +57,10 @@ describe("Mostrar el precio total con NV", () => {
         expect(resultado).toEqual(226.8);
     });
 });
+describe("Mostrar el precio total con UT", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(12,19,"UT");
+        expect(resultado).toEqual(243.162);
+    });
+});
