@@ -50,3 +50,10 @@ describe("Mostrar el precio total con AL", () => {
         expect(resultado).toEqual(208);
     });
 });
+describe("Mostrar el precio total con NV", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(15,14,"NV");
+        expect(resultado).toEqual(226.8);
+    });
+});
