@@ -15,10 +15,13 @@ form.addEventListener("submit", (event) => {
   //const resultado= calculator.ObtenerImpuestoPorEstado(estado.value);
   const impuesto = calculator.mostrarEstado(estado.value);
   const PrecioNeto=calculator.MostrarPrecioNeto(firstNumber,secondNumber);
+  const DescuentoTotal=calculator.obtenerDescuento(PrecioNeto);
+  const Descuento=calculator.mostrarPorcentajeDesc(PrecioNeto);
   const ImpuestoEstado=calculator.ObtenerImpuestoPorEstado(PrecioNeto,estado.value);
   const PrecioTotal= calculator.PrecioTotal(firstNumber,secondNumber,estado.value);
 
-  div.innerHTML = "<p>Precio neto  " + "("+firstNumber+"*$"+secondNumber +")"+
-  " = " +"$"+PrecioNeto + "</p>"+"<p>El Impuesto para: "+ estado.value+" % "+ impuesto +" : "+"$"+ImpuestoEstado+ "</p>"+
-  "<p>El Precio total es de :"+"$"+ PrecioTotal+"</p>";
+  div.innerHTML = "<p>Precio neto  " + "("+firstNumber+"*$"+secondNumber +")"+" = " +"$"+PrecioNeto + "</p>"+
+  "<p>Descuento: "+"(" +Descuento+" % )= "+"$"+DescuentoTotal+ "</p>"+
+  "<p>Impuesto para: "+ estado.value+" % "+ impuesto +" : "+"$"+ImpuestoEstado+ "</p>"+
+  "<p>Precio total (descuento e impuesto):"+"$"+ PrecioTotal+"</p>";
 });

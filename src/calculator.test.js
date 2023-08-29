@@ -64,3 +64,10 @@ describe("Mostrar el precio total con UT", () => {
         expect(resultado).toEqual(243.162);
     });
 });
+describe("Mostrar el precio total de 1500", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(500,3,"UT");
+        expect(resultado).toEqual(1554.75);
+    });
+});
