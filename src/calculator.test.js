@@ -36,3 +36,10 @@ describe("Mostrar el precio total", () => {
         expect(resultado).toEqual(21.65);
     });
 });
+describe("Mostrar el precio total", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(1,2,"TX");
+        expect(resultado).toEqual(2.125);
+    });
+});
