@@ -64,10 +64,17 @@ describe("Mostrar el precio total con UT", () => {
         expect(resultado).toEqual(243.162);
     });
 });
-describe("Mostrar el precio total de 1500", () => {
+describe("Mostrar el precio total con el Porcentaje de descuento que corresponde a 1000", () => {
     it("Deberia retornar el valor total a", () => {
         const calculatorInstance = new totalizarventas();
         const resultado = calculatorInstance.PrecioTotal(500,3,"UT");
         expect(resultado).toEqual(1554.75);
+    });
+});
+describe("Mostrar el precio total con el Porcentaje de descuento que corresponde a 3000", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(500,6,"UT");
+        expect(resultado).toEqual(3049.5);
     });
 });
