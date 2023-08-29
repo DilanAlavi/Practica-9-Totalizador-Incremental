@@ -23,5 +23,9 @@ class totalizarventas{
             return 0;
         }
      }
+     MostrarPrecioNeto(precio, cantidad)
+     {
+        return precio*cantidad;
+     }
 }
 export default totalizarventas;

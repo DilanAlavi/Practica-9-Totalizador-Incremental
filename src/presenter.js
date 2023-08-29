@@ -12,7 +12,8 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
   const calculator= new totalizarventas();
-  const resultado= calculator.ObtenerImpuestoPorEstado(estado.value);
+  //const resultado= calculator.ObtenerImpuestoPorEstado(estado.value);
+  const resultado= calculator.MostrarPrecioNeto(firstNumber,secondNumber);
 
-  div.innerHTML = "<p>El estado elegido es: " + resultado + "</p>";
+  div.innerHTML = "<p>El precio Neto es: " + resultado + "</p>";
 });

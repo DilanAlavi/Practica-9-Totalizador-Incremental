@@ -21,4 +21,10 @@ describe("Mostrar el estado seleccionado", () => {
         expect(resultado).toEqual(0.08);
     });
 });
-  
+describe("Mostrar el precioNeto", () => {
+    it("Deberia retornar el valor total", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.MostrarPrecioNeto(4,5);
+        expect(resultado).toEqual(20);
+    });
+});
