@@ -78,3 +78,10 @@ describe("Mostrar el precio total con el Porcentaje de descuento que corresponde
         expect(resultado).toEqual(3049.5);
     });
 });
+describe("Mostrar el precio total con el Porcentaje de descuento que corresponde a 7000", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(700,10,"UT");
+        expect(resultado).toEqual(6975.5);
+    });
+});
