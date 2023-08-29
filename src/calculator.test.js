@@ -29,17 +29,24 @@ describe("Mostrar el precio ", () => {
         expect(resultado).toEqual(0.0825);
     });
 });
-describe("Mostrar el precio total", () => {
+describe("Mostrar el precio total con CA", () => {
     it("Deberia retornar el valor total a", () => {
         const calculatorInstance = new totalizarventas();
         const resultado = calculatorInstance.PrecioTotal(4,5,"CA");
         expect(resultado).toEqual(21.65);
     });
 });
-describe("Mostrar el precio total", () => {
+describe("Mostrar el precio total con TX", () => {
     it("Deberia retornar el valor total a", () => {
         const calculatorInstance = new totalizarventas();
         const resultado = calculatorInstance.PrecioTotal(1,2,"TX");
         expect(resultado).toEqual(2.125);
+    });
+});
+describe("Mostrar el precio total con AL", () => {
+    it("Deberia retornar el valor total a", () => {
+        const calculatorInstance = new totalizarventas();
+        const resultado = calculatorInstance.PrecioTotal(10,20,"AL");
+        expect(resultado).toEqual(208);
     });
 });
